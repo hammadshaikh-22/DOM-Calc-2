@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: rgba(239, 241, 236, 0.554);
+            text-align: center;
+            padding: 20px;
+            border: 3px solid rgb(224, 5, 5);
+            border-radius: 20px;
+        }
+
+        button {
+            width: 80%;
+            border-radius: 40px;
+            display: block;
+            margin: auto;
+        }
+        input{
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Calculator</h1>
+        <div class="row">
+            <div class="col col-lg-12">
+                <input type="text" class="form-control" readonly id="input" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="cube()">X<sup>3</sup></button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="square()">X<sup>2</sup></button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="clearAll()">C</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="backSpace()">X</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary">π</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="squareRoot()">√</button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary">∛</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('/')">/</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('7')">7</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('8')">8</button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('9')">9</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('*')">*</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('4')">4</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('5')">5</button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('6')">6</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('-')">-</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('1')">1</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('2')">2</button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('3')">3</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('+')">+</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="signSet('-')">+/-</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('0')">0</button>
+            </div>
+
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="setNum('.')">.</button>
+            </div>
+            <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
+                <button class="btn btn-primary" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+
+</html>
