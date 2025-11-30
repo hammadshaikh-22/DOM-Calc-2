@@ -46,6 +46,9 @@ document.addEventListener("keydown" , function(val){
     else if(val.key == "Backspace"){
         backSpace()
     }
+    else if(val.key == "c"){
+        clearAll()
+    }
 }
 
 
