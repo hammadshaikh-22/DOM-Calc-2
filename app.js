@@ -55,5 +55,54 @@ function cube(){
 function squareRoot(){
     inputData.value = Math.sqrt(inputData.value)
 }
+function cubeRoot(){
+    inputData.value = Math.cbrt(inputData.value)
+}
+
+
+function percentageCalc(){
+    var result = 0
+    var value = inputData.value + "%"
+    if (value.toString().includes("%")){
+        var numb = parseFloat(value)
+        result = numb/100
+    }
+    if (value.toString().includes("%") && value.toString().includes("+")){
+        var res = value.toString().split("+")
+        var numb1 = res[0]
+        var numb2 = res[1]
+        var num3 = (parseFloat(numb2)/100)*numb1
+        var result =  Number(numb1) +Number(num3)  
+        console.log(result)
+        inputData.value = result
+    }
+    if (value.toString().includes("%") && value.toString().includes("-")){
+        var res = value.toString().split("-")
+        var numb1 = res[0]
+        var numb2 = res[1]
+        var num3 = (parseFloat(numb2)/100)*numb1
+        var result =  Number(numb1) -Number(num3)  
+        console.log(result)
+        inputData.value = result
+    }
+    if (value.toString().includes("%") && value.toString().includes("*")){
+        var res = value.toString().split("*")
+        var numb1 = res[0]
+        var numb2 = res[1]
+        var num3 = (parseFloat(numb2)/100)*numb1
+        var result =  Number(numb1) *Number(num3)  
+        console.log(result)
+        inputData.value = result
+    }
+    if (value.toString().includes("%") && value.toString().includes("/")){
+        var res = value.toString().split("/")
+        var numb1 = res[0]
+        var numb2 = res[1]
+        var num3 = (parseFloat(numb2)/100)*numb1
+        var result =  Number(numb1) /Number(num3)  
+        console.log(result)
+        inputData.value = result
+    }
+}
 
 

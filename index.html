@@ -15,7 +15,7 @@
             background-color: rgba(239, 241, 236, 0.554);
             text-align: center;
             padding: 20px;
-            border: 3px solid rgb(224, 5, 5);
+            
             border-radius: 20px;
         }
 
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container card text-bg-dark mt-4">
         <h1>Calculator</h1>
         <div class="row">
             <div class="col col-lg-12">
@@ -41,14 +41,14 @@
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="cube()">X<sup>3</sup></button>
+                <button class="btn btn-light" onclick="cube()">X<sup>3</sup></button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="square()">X<sup>2</sup></button>
+                <button class="btn btn-light" onclick="square()">X<sup>2</sup></button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="clearAll()">C</button>
+                <button class="btn btn-warning text-bg-warning" onclick="clearAll()">C</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
                 <button class="btn btn-primary" onclick="backSpace()">X</button>
@@ -56,77 +56,77 @@
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary">π</button>
+                <button class="btn btn-light" onclick="percentageCalc()">%</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="squareRoot()">√</button>
+                <button class="btn btn-light" onclick="squareRoot()">√</button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary">∛</button>
+                <button class="btn btn-light" onclick="cubeRoot()">∛</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('/')">/</button>
+                <button class="btn btn-light" onclick="setNum('/')">/</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('7')">7</button>
+                <button class="btn btn-light" onclick="setNum('7')">7</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('8')">8</button>
+                <button class="btn btn-light" onclick="setNum('8')">8</button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('9')">9</button>
+                <button class="btn btn-light" onclick="setNum('9')">9</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('*')">*</button>
+                <button class="btn btn-light" onclick="setNum('*')">*</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('4')">4</button>
+                <button class="btn btn-light" onclick="setNum('4')">4</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('5')">5</button>
+                <button class="btn btn-light" onclick="setNum('5')">5</button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('6')">6</button>
+                <button class="btn btn-light" onclick="setNum('6')">6</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('-')">-</button>
+                <button class="btn btn-light" onclick="setNum('-')">-</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('1')">1</button>
+                <button class="btn btn-light" onclick="setNum('1')">1</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('2')">2</button>
+                <button class="btn btn-light" onclick="setNum('2')">2</button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('3')">3</button>
+                <button class="btn btn-light" onclick="setNum('3')">3</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('+')">+</button>
+                <button class="btn btn-light" onclick="setNum('+')">+</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="signSet('-')">+/-</button>
+                <button class="btn btn-light" onclick="signSet('-')">+/-</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('0')">0</button>
+                <button class="btn btn-light" onclick="setNum('0')">0</button>
             </div>
 
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="setNum('.')">.</button>
+                <button class="btn btn-light" onclick="setNum('.')">.</button>
             </div>
             <div class="col col-lg-3 col-sm-4 col-4 col-md-4">
-                <button class="btn btn-primary" onclick="equal()">=</button>
+                <button class="btn btn-light" onclick="equal()">=</button>
             </div>
         </div>
     </div>
