@@ -30,6 +30,7 @@ function setNum(num) {
 }
 
 
+
 document.addEventListener("keydown" , function(val){
     val.preventDefault()
     // console.log(val.key)
