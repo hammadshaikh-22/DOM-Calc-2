@@ -28,6 +28,29 @@ function setNum(num) {
 
 
 }
+
+
+document.addEventListener("keydown" , function(val){
+    val.preventDefault()
+    // console.log(val.key)
+    if (val.key == "Enter"){
+        
+        equal()
+    }
+    else if(Number(val.key)>=0 && Number(val.key<=9)){
+        setNum(val.key)
+    }
+    else if(val.key == "+" || val.key == "-" || val.key == "*" || val.key == "/"){
+        setNum(val.key)
+    }
+    else if(val.key == "Backspace"){
+        backSpace()
+    }
+}
+
+
+
+)
 function equal() {
     inputData.value = eval(inputData.value)
 }
